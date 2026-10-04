@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Áreas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h1>Selecciona una figura:</h1>
+
+    <div class="figuras">
+
+        <div class="figura" onclick="mostrarFormulario('cuadrado')">
+            <img src="imagenes/cuadrado.jpg" alt="Cuadrado">
+            <h2>Cuadrado</h2>
+        </div>
+
+        <div class="figura" onclick="mostrarFormulario('rectangulo')">
+            <img src="imagenes/rectangulo.jpg" alt="Rectángulo">
+            <h2>Rectángulo</h2>
+        </div>
+
+        <div class="figura" onclick="mostrarFormulario('triangulo')">
+            <img src="imagenes/triangulo.jpg" alt="Triángulo">
+            <h2>Triángulo</h2>
+        </div>
+
+        <div class="figura" onclick="mostrarFormulario('circulo')">
+            <img src="imagenes/circulo.jpg" alt="Círculo">
+            <h2>Círculo</h2>
+        </div>
+
+        <div class="figura" onclick="mostrarFormulario('trapecio')">
+            <img src="imagenes/trapecio.jpg" alt="Trapecio">
+            <h2>Trapecio</h2>
+        </div>
+
+    </div>
+
+
+    <!-- Formulario del cuadrado -->
+
+    <div id="form-cuadrado" class="formulario">
+        <h2>Área del Cuadrado</h2>
+
+        <label for="lado">Lado:</label>
+        <input type="number" id="lado" placeholder="Introduce el lado" min="0" step="any">
+
+        <button onclick="calcularAreaCuadrado()">Calcular área</button>
+    </div>
+
+
+    <!-- Formulario del rectángulo -->
+
+    <div id="form-rectangulo" class="formulario">
+        <h2>Área del Rectángulo</h2>
+
+        <label for="baseRectangulo">Base:</label>
+        <input type="number" id="baseRectangulo" placeholder="Introduce la base" min="0" step="any">
+
+        <label for="alturaRectangulo">Altura:</label>
+        <input type="number" id="alturaRectangulo" placeholder="Introduce la altura" min="0" step="any">
+
+        <button onclick="calcularAreaRectangulo()">Calcular área</button>
+    </div>
+
+
+    <!-- Formulario del triángulo -->
+
+    <div id="form-triangulo" class="formulario">
+        <h2>Área del Triángulo</h2>
+
+        <label for="baseTriangulo">Base:</label>
+        <input type="number" id="baseTriangulo" placeholder="Introduce la base" min="0" step="any">
+
+        <label for="alturaTriangulo">Altura:</label>
+        <input type="number" id="alturaTriangulo" placeholder="Introduce la altura" min="0" step="any">
+
+        <button onclick="calcularAreaTriangulo()">Calcular área</button>
+    </div>
+
+
+    <!-- Formulario del círculo -->
+
+    <div id="form-circulo" class="formulario">
+        <h2>Área del Círculo</h2>
+
+        <label for="radio">Radio:</label>
+        <input type="number" id="radio" placeholder="Introduce el radio" min="0" step="any">
+
+        <button onclick="calcularAreaCirculo()">Calcular área</button>
+    </div>
+
+
+    <!-- Formulario del trapecio -->
+
+    <div id="form-trapecio" class="formulario">
+        <h2>Área del Trapecio</h2>
+
+        <label for="baseMayor">Base mayor:</label>
+        <input type="number" id="baseMayor" placeholder="Introduce la base mayor" min="0" step="any">
+
+        <label for="baseMenor">Base menor:</label>
+        <input type="number" id="baseMenor" placeholder="Introduce la base menor" min="0" step="any">
+
+        <label for="alturaTrapecio">Altura:</label>
+        <input type="number" id="alturaTrapecio" placeholder="Introduce la altura" min="0" step="any">
+
+        <button onclick="calcularAreaTrapecio()">Calcular área</button>
+    </div>
+
+
+    <!-- Resultado de las operaciones -->
+
+    <div id="resultado"></div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
